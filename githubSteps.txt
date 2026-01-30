@@ -57,6 +57,9 @@ Your fork and local are now behind again.
     git push origin main
     git branch -d feature-x
 
+    Now delete this branch to keep your fork CLEAN
+    git push origin --delete feature-x
+
 # keeping code in sync
 1. Keep your fork (origin) in sync with upstream
 2. Keep your local code in sync with your fork
