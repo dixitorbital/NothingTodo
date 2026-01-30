@@ -1,2 +1,2 @@
 const user1 = "user1";
-const dept = "ece";
+const dept = "eee";

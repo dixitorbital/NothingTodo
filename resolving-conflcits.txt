@@ -1,0 +1,73 @@
+1️⃣ Pull the latest changes
+
+Always sync first.
+
+git checkout your-branch
+git fetch origin
+git merge origin/main
+
+
+(or origin/develop, depending on the repo)
+
+If there’s a conflict, Git will stop and tell you which files are conflicted.
+
+2️⃣ Open the conflicted file
+
+You’ll see markers like this:
+
+<<<<<<< HEAD
+your code
+=======
+incoming code
+>>>>>>> main
+
+
+Meaning:
+
+HEAD → your branch
+
+main → the branch you’re merging from
+
+3️⃣ Decide what to keep
+
+You can:
+
+Keep your code
+
+Keep their code
+
+Combine both
+
+Rewrite cleanly
+
+Example (resolved):
+
+const user = getUser();
+validateUser(user);
+saveUser(user);
+
+
+🚨 Delete all conflict markers (<<<<<<<, =======, >>>>>>>)
+If even one remains → Git won’t proceed.
+
+4️⃣ Mark conflict as resolved
+git add backend/userhandler.js
+
+
+If multiple files:
+
+git add .
+
+5️⃣ Complete the merge
+git commit
+
+
+Git auto-generates a merge commit message—just save and exit.
+
+6️⃣ Push your branch
+git push origin your-branch
+
+
+Now GitHub should say:
+
+✅ This branch has no conflicts
