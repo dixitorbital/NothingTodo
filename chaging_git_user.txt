@@ -1,0 +1,23 @@
+1. getting a PAT 
+settings->developer settings->PAT(classic)->scope-repo
+
+2. 
+Control Panel → Credential Manager → Windows Credentials
+Look for:
+
+git:https://github.com
+
+That stored credential decides which GitHub account is used.
+If want to change it remove git://https:://github.com user
+
+now try to push ur changes
+
+git push origin my-branch
+GitHub asks for:
+
+Username
+Personal Access Token (PAT) (not password)
+
+Git stores it in Credential Manager.
+
+
