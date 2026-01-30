@@ -1,0 +1,63 @@
+# Steps to do changes in ur own repo
+
+1. create new repo
+2. add README.md file to have main branch else u won't
+3. git clone repo url
+4. cd project
+5. create a new branch new-branch
+6. make updates
+7. git add .
+8. git commit -m "commit msg"
+9. git push -u origin new-branch
+8. goto ur profile on github, create a pull request
+
+
+
+1️⃣ One-time setup (DO THIS ONCE)
+Clone your fork (not the original repo)
+Add the original repo as upstream
+Verify remotes
+
+2️⃣ Daily sync: update your fork from upstream
+    git checkout main
+    git fetch upstream
+    git merge upstream/main
+    git push origin main
+📌 Now:Upstream → Fork → Local are aligned
+3️⃣ Start feature work (ALWAYS from updated main)
+    git checkout -b feature-x
+    Make changes → commit:
+    git add .
+    git commit -m "Add feature x"
+
+4️⃣ Keep your feature branch up to date (important)
+    If upstream changed while you were working:
+        git checkout main
+        git fetch upstream
+        git merge upstream/main
+        git checkout feature-x
+        git merge main
+
+        git push origin feature-x
+
+6️⃣ Open a Pull Request
+    On GitHub:
+    Base repo → original repo (upstream)
+    Base branch → main
+    Compare repo → your fork (origin)
+    Compare branch → feature-x
+
+7️⃣ After PR is merged (CLEANUP)
+
+Your fork and local are now behind again.
+
+    git checkout main
+    git fetch upstream
+    git merge upstream/main
+    git push origin main
+    git branch -d feature-x
+
+# keeping code in sync
+1. Keep your fork (origin) in sync with upstream
+2. Keep your local code in sync with your fork
+3. Never push directly to upstream
