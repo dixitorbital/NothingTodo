@@ -1,0 +1,12 @@
+# Steps to do changes in ur own repo
+
+1. create new repo
+2. add README.md file to have main branch else u won't
+3. git clone repo url
+4. cd project
+5. create a new branch new-branch
+6. make updates
+7. git add .
+8. git commit -m "commit msg"
+9. git push -u origin new-branch
+8. goto ur profile on github, create a pull request
